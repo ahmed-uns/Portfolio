@@ -1,0 +1,447 @@
+
+/* CSS HEX */
+:root{ --color-background: #FFFFFF; /* الأبيض للخلفية */
+   --color-primary: #FF0000; /* الأحمر للنص الرئيسي */
+    --color-secondary: #949494; /* الرمادي للنصوص الثانوية */ 
+    --color-button: #FFD700; /* الأصفر الذهبي للأزرار */ 
+    --color-link: #000000; /* الأسود للروابط */
+    --color-hover-button: #FFD700; /* الأصفر الذهبي عند التمرير على الأزرار */ 
+    --color-hover-link: #FF0000; /* الأحمر عند التمرير على الروابط */
+}
+/* fonts (
+font-family: "DM Serif Display"
+  headings :"montserrat"
+  main text: "open sans"
+  normal text : "lato"
+) */
+
+
+
+
+body {
+  background: linear-gradient(to bottom,black,#e9e9e9,#f0f0f0 , #b6b6b6 ,#1a1a1a);
+  background-repeat: no-repeat;
+  color: var(--color-link);
+  font-family: "open sans";
+}
+nav {
+  background-color: var(--color-link);
+  color: var(--color-background);
+  height: min-content;
+  font-family: "open sans";
+  width: 100%; 
+  z-index: 2 }
+
+  nav ul {
+    z-index: 10;
+    
+  }
+  nav span {
+    color:var(--color-primary);
+    font-weight: 600;
+    
+  }
+  .nav-link {
+    font-weight: 500;
+    color: #FFFFFF;
+  }
+  .nav-link:hover {
+    color : var(--color-hover-link);
+   
+    transition: .8s;
+  }
+  nav .container-fluid {
+    
+    width: 100%;
+    background-color: #000000;
+    color: white;
+  }
+  
+  .navbar-brand {
+    font-family: "DM Serif Display";
+    font-weight: 600;
+    color:var(--color-hover-button);
+    text-decoration: none;
+  }
+  .navbar-brand:hover {
+    color: var(--color-background);
+  }
+  
+
+  #home {
+    background-size: cover;
+
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+  }
+  
+  
+  
+  h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-top: 20px;
+    font-family: "open sans";
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+  #name {
+    font-size: 80px;
+    z-index: -1;
+    transition: opacity 0.5s ease-in-out;
+    font-family: "DM Serif Display";
+    font-weight: 900;
+    line-height: 80%;
+    color: rgb(255, 8, 8);
+    text-shadow: var(--color-primary) 20px 30px 7px;
+  }
+  #home ul {
+    text-decoration: none;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 38%;
+    list-style: none;
+   
+  }
+#home ul li a{
+  font-style: none;
+  color: #000000;
+  display: inline;
+}
+#home ul li a i{
+  font-size: 32px;
+}
+#home ul li a i:hover{
+  color : var(--color-hover-button);
+  text-shadow: var(--color-hover-button) 5px 5px 15px;
+  transform: scale(110%);
+  transition: .3s;
+  
+}
+
+#about-me,#skills ,#projects , #contact{
+  width: 100%;
+  display: flex ;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 87vh;
+  
+  
+  
+}
+
+#about-me div {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+#about-me img {
+  width: 18%;
+  border-radius: 2%;
+  box-shadow: var(--color-primary) -8px 0px 25px;
+  background-color: var(--color-primary);
+  padding: 0;
+}
+#about-me p {
+  /* width: 50%; */
+  column-count: 2;
+  color: var(--color-secondary);
+  
+  
+}
+/* _______________________________________________________________________ */
+#download-cv button {
+  height: 130%;
+  background-color: var(--color-hover-button);
+  color: var(--color-background);
+  border: solid 2px var(--color-button);
+  /* box-shadow: var(--color-button) 0.3px 0.3px 3px; */
+  
+}
+#download-cv button:hover {
+  box-shadow:var(--color-hover-button) 1px 1px 8px ;
+  background-color: var(--color-link);
+  color: var(--color-button);
+  transition: 0.2s;
+}
+#download-cv button:active {
+  background-color: var(--color-secondary);
+  color: var(--color-button);
+  transition: 0;
+}
+.skill {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--color-secondary);
+  font-family: "open sans";
+  font-size: 46px;
+  transition: 1.2s ;
+}
+output {
+  opacity: 0;
+  display: block;
+  transition: 1s;
+  font-size: 16px;
+  color: var(--color-secondary);
+  text-align: center;
+  margin:3px auto;
+  font-family:monospace;
+}
+.skill:hover  {
+  color: var(--color-primary)
+}
+.skill:hover .progress {
+  background-color: var(--color-button)
+}
+.skill:hover .progress-bar {
+  box-shadow: #000000 0px 1px 10px;
+  opacity: 1
+}
+.skill:hover output {
+  opacity: 1
+}
+  .progress-bar {
+    background-color: var(--color-background);
+    height: 8px;
+    width: 75px;
+    transition: 1.2s;
+    opacity: 0;
+    border-radius: 5px;
+  }
+  .progress {
+    background-color: var(--color-secondary);
+    height: 100%;
+    width: 80%;
+    border-radius: 0;
+    transition: 1.2s linear;
+  }
+  
+  
+  ol {
+    list-style: none;
+  }
+  
+
+  .carousel-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    
+  }
+  .carousel-content img {
+    box-shadow: #000000 0px 5px 10px;
+    margin-bottom: 3px;
+    width: 75%;
+
+    position: relative;
+  }
+  .project-discrib {
+    width: 50%;
+    margin: auto;
+    position: absolute;
+    bottom: 0;
+    border-radius: 0 10% 0 0 ;
+    opacity: 0;
+    height: 40%;
+    transition: 0.3s ease;
+    padding: 2%;
+    
+  }
+  .project-discrib h4 {
+    color: var(--color-button);
+
+  }
+  .project-discrib p {
+    color:white  }
+
+  .project-discrib>div {
+    display: flex;
+    justify-content: space-around;
+  }
+  .html {
+    display: inline;
+    padding: 1.8%;
+    margin: 5px;
+    color: white;
+    background-color: orangered;
+    font-weight: 600;
+    line-height: 92%;
+
+  }
+  .css {
+    display: inline;
+    padding: 1.8%;
+    margin: 5px;
+    color: white;
+    background-color: blue;
+    font-weight: 600;
+    line-height: 92%;
+
+  }
+  .javascript {
+    display: inline;
+    padding: 1.8%;
+    margin: 5px;
+    color: black;
+    background-color: yellow;
+    font-weight: 600;
+    line-height: 92%;
+
+  }
+  .bootstrap {
+    display: inline;
+    padding: 1.8%;
+    margin: 5px;
+    color: white;
+    background-color: purple;
+    font-weight: 600;
+    line-height: 92%;
+
+  }
+  .API {
+    display: inline;
+    padding: 1.8%;
+    margin: 5px;
+    color: white;
+    background-color: turquoise;
+    font-weight: 600;
+    line-height: 92%;
+
+  }
+
+  .react {
+    display: inline;
+    padding: 1.8%;
+    margin: 5px;
+    color: white;
+    background-color: orangered;
+    font-weight: 600;
+    line-height: 92%;
+
+  }
+.carousel-content:hover .project-discrib {
+  opacity: 1;
+}
+.carousel-content img
+{transition:.5s;}
+.carousel-content:hover img {
+transition: 0.5s ;
+filter: blur(3.4px);
+box-shadow: rgba(238, 238, 238, 0.8) 0 5px 10px;
+}
+footer {
+  height: 87vh;
+}
+footer ul {
+  margin-top: 10vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+footer ul li {
+  width: 20%;
+  display: inline;
+}
+footer ul li a {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-decoration: none;
+  color: var(--color-secondary);
+  transition: 0.2s;
+  font-family: "DM Serif Display";
+  flex-wrap:wrap;
+  text-wrap: inherit;
+
+}
+footer ul li a:hover {
+  color: black;
+}
+footer ul li a p {
+  width: 70%;
+}
+footer ul li a i {
+  width: 30%;
+  
+}
+footer #copy-rights {
+  font-size: xx-small;
+  text-align: center;
+  position: relative;
+  bottom:0 ;
+}
+
+
+
+
+@media screen and (max-width:1000px) {
+  #about-me div {
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    
+
+  }
+  #hello {
+    font-size: 23px;
+  }
+  #name {
+    font-size: 40px;
+  }
+  #about-me img {
+    width: 120px;
+    border-radius: 10%;
+
+  }
+  #about-me p {
+    
+    column-count: 1;
+    font-size: small;
+  }
+  .project-discrib {
+    position: static;
+    opacity: 1;
+    font-size: 14px;
+  }
+  .project-discrib p {
+    color: rgb(81, 81, 81);
+
+  }
+  .project-discrib div {
+    font-size: 12px;
+  }
+  .skill, .skill h4 {
+    font-size: medium;
+  }
+  footer ul li {
+    width: 80%;
+  }
+  footer ul li a {
+    font-size: x-small;
+    text-wrap: none;
+    justify-content: space-evenly;
+  }
+  footer ul li a p{
+    width: auto;
+  }
+  footer ul li a i {
+    width: auto;
+  }
+}
